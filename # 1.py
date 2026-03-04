@@ -101,3 +101,12 @@
 # while a <= 20:
 #     print(a,end="--")
 #     a += 1
+
+# 4. True、False（布尔变量）
+
+# True：关键字True与1相同。
+# False：关键字False与0相同。
+
+print(1 < 3)
+print(5 < 2)
+print("p" in "python")
