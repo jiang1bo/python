@@ -1,0 +1,91 @@
+# # 1. 变量定义：学习如何存储不同类型的数据
+# name = "你的名字"
+# age = 25
+# hobbies = ["阅读", "编程", "旅行"] # 列表(List)
+# is_learning_ai = True # 布尔值(Boolean)
+
+# # 2. 交互逻辑：简单的 if-else 判断
+# print(f"你好！我叫 {name}。")
+
+# if age < 30:
+#     print("我目前处于职业发展的黄金期。")
+# else:
+#     print("我正在探索人生新的可能性。")
+
+# # 3. 循环练习：遍历列表中的内容
+# print("我的爱好包括：")
+# for hobby in hobbies:
+#     print(f"- {hobby}")
+
+# # 4. 简单数据计算：输出基础结论
+# if is_learning_ai:
+#     print("目前 AI 学习进度：已启动！")
+
+
+
+# name =  input("输入名字：")
+# age = int(input("输入年龄："))
+
+# print(f"hi{name}!you are {age}.")
+# print(f"five year pass you are {age+5}")
+
+# height  =   float(input("输入身高："))
+# weight  =   float(input("输入体重："))
+# bmi = weight/(height**2)
+
+# print(f"you BMI is {bmi:.2f}")
+
+# if bmi < 18.5:
+#     status = "偏瘦"
+# elif 18.5 <= bmi <24:
+#     status = "正常"
+# else:
+#     status = "偏胖"
+
+# print(f"根据bmi，身体评估为：{status}")
+
+# use_role = "admin1"
+
+# if use_role == "admin":
+#     print("welcome!!")
+# else:
+#     print("sorry")
+
+# baddate = [120, 85, -5, 200, "Missing", 45]
+
+# cleaned = []
+
+# for item in baddate:
+#     if isinstance(item,int) and item > 0:
+#         cleaned.append(item)
+
+# print(f"old data :{baddate}")
+# print(f"useful data :{cleaned}")
+# print(f"平均值: {sum(cleaned) / len(cleaned)}")
+
+# 2026.3.4 关键字详解：
+
+# 1. and、or、not （逻辑运算符）
+# and：如果两个语句都返回True，则返回值将仅为True，否则它将返回False。
+# or：如果其中一条语句返回True，则返回值为True，否则它将返回False。
+# not：如果语句不是True，则返回值为True，否则返回False。
+# # 1. and、or、not （逻辑运算符）
+# a = 5 > 3 and 1 < 2
+# b = 5 > 3 or 1 > 2
+# c = not (5 < 3)
+# print(a, b, c)
+
+# 2. if、elif、else（条件语句）
+
+# if：用于创建条件语句（if语句），并且仅当条件为True时，才允许执行if代码块。
+# elif：在条件语句（if语句）中使用，是else if的缩写。
+# else：在条件语句（if语句）中使用，并确定在if条件为False时该执行的代码。
+
+# age = int(input("请输入您的年龄："))
+# if age < 18:
+#     print(f"您的岁数是{age},是一个未成年人")
+# elif age < 40:
+#     print(f"您的岁数是{age},是一个青年人")
+# else:
+#     print(f"您的岁数是{age},是一个中老年人")
+
