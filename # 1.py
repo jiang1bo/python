@@ -21,8 +21,6 @@
 # if is_learning_ai:
 #     print("目前 AI 学习进度：已启动！")
 
-
-
 # name =  input("输入名字：")
 # age = int(input("输入年龄："))
 
@@ -89,3 +87,17 @@
 # else:
 #     print(f"您的岁数是{age},是一个中老年人")
 
+# 3. for、while（循环语句）
+
+# for：用于创建一个for循环，它可以用来遍历序列，例如列表，元组等。
+# while：用于定义while循环，while循环将继续，直到while的条件为False。
+
+# languages = ["python","java","ruby","golang"]
+
+# for i in languages:print(i,end="|")
+# print("________分隔符________")
+
+# a = 0
+# while a <= 20:
+#     print(a,end="--")
+#     a += 1
