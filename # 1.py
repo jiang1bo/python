@@ -107,6 +107,23 @@
 # True：关键字True与1相同。
 # False：关键字False与0相同。
 
-print(1 < 3)
-print(5 < 2)
-print("p" in "python")
+# print(1 < 3)
+# print(5 < 2)
+# print("p" in "python")
+
+
+# 5. continue、break（循环控制）
+#continue 跳过。break 中断？
+# continue：continue关键字用于在for循环（或while循环）中结束当前迭代，并继续进行下一个迭代。
+# break：break关键字用于中断for循环或while循环。
+
+# for i in range(10):
+#     if i == 5 :
+#         continue
+#     print(i,end="|")
+# print("unuse")
+
+# for i in range(10):
+#     if i == 5 :
+#         break
+#     print(i,end="|")
