@@ -238,28 +238,98 @@
 
 #  global关键字用于创建一个全局变量。nonlocal关键字用于声明一个非局部变量，用于标识外部作用域的变量。
 
-x = 10
+# x = 10
+# def global_test():
+#     global x
+#     x = 21
+#     return x
 
-def global_test():
-    global x
-    x = 21
-    return x
+# def nonlocal_test():
+#     count = 0
+#     def test2():
+#         nonlocal count
+#         count += 1
+#         return count
+#     return test2
 
-def nonlocal_test():
-    count = 0
-    def test2():
-        nonlocal count
-        count += 1
-        return count
-    return test2
+# num1 = global_test()
+# print(num1)
+# print(x)
+# print("fffffffffff分隔线ffffffffffffff")
 
-num1 = global_test()
+# val = nonlocal_test()
+# print(val())
+# print(val())
+# print(val())
 
-print(num1)
-print(x)
-print("fffffffffff分隔线ffffffffffffff")
 
-val = nonlocal_test()
-print(val())
-print(val())
-print(val())
+# 14. in、is（判断语句）
+
+# print("z"in"zhao")
+# print("z"not in "zhao")
+
+# l1 = [1, 2, 3]
+# l2 = l1.copy()
+# l3 = l1
+# print(l1 is l2)
+# print(l1 is l3)
+
+
+# 15. None（空值）
+
+#  None关键字用于定义一个空值（根本没有值），与0，False或空字符串不同。 None是其自身的数据类型（NoneType）
+
+# x = None
+
+# print(x)
+
+# y = [1,3,4,].reverse()
+# z = [1,24,55,55,33]
+# print(y)
+
+# print(z)
+# 16. assert（测试代码）
+
+#  调试代码时，使用assert关键字。主要用于测试代码中的条件是否为True，如果为False，将引发AssertionError
+
+# f-string与其他格式化方式对比
+# 格式化方式	语法示例	特点
+# f-string	f"Hello {name}!"	简洁、直观、支持表达式
+# str.format()	"Hello {}!".format(name)	兼容性好（Python 2.6+），但代码较长
+# % 操作符	"Hello %s!" % name	传统方式，可读性差，不支持复杂表达式
+# str.join()	"Hello " + name + "!"	字符串拼接，代码冗长，易出错
+
+# x = 10
+
+# try:
+#     assert x == 10
+#     print(f"x == 10","赵江波")
+#     assert x == 11
+# except :
+#     print(f"test fail x right={x}")
+
+
+# 17. with（文件处理）
+
+# with常和open使用，用于读取或写入文件
+# with语句：
+
+# 语法：with 上下文管理器 as 变量:
+# 作用：创建一个上下文环境，在进入和退出时自动执行特定操作
+# 优势：确保资源（如文件）在使用完毕后被正确释放，即使发生异常
+# open()函数：
+
+# 语法：open(file, mode)
+# 参数：
+# file：文件路径
+# mode：打开模式（"r"表示只读）
+# 返回值：文件对象
+# 文件读取：
+
+# f.read()：读取文件的全部内容并返回字符串
+# 自动资源管理：
+
+# 当with块执行完毕时，无论是否发生异常，文件都会被自动关闭
+# 这避免了手动调用f.close()的需要，减少了资源泄露的风险
+with open("data.txt","r") as f:
+    print(f.read())
