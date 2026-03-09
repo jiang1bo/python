@@ -194,3 +194,20 @@
 # print(mysumuse)
 
 # print(mysum(12,23))
+
+# 10. class（类）
+
+#  class关键字用于创建（或定义）一个类。
+# class Zhao:
+#     name = "fermis"
+#     age = 20
+#     height = 1.80
+#     weight = 70
+
+# s = Zhao()
+# name = s.name
+# age = s.age
+# print(name,age)
+# height = s.height
+# weight = s.weight
+# print(name,age,height,weight)
