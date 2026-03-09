@@ -331,5 +331,147 @@
 
 # 当with块执行完毕时，无论是否发生异常，文件都会被自动关闭
 # 这避免了手动调用f.close()的需要，减少了资源泄露的风险
-with open("data.txt","r") as f:
-    print(f.read())
+# with open("data.txt","r") as f:
+#     print(f.read())
+# 18. yield（生成器）
+
+#  yield关键字结束一个函数，返回一个生成器，用于从函数依次返回值。
+
+# 第340-341行：定义了一个生成器函数 yieldtest()
+
+# 使用 yield 关键字，使其成为生成器函数
+# 当被迭代时，会产生值 10
+# 第342行：print(yieldtest)
+
+# 打印函数对象本身，而不是调用函数
+# 输出：函数的内存地址表示，如 <function yieldtest at 0x...>
+# 第343行：print(yieldtest())
+
+# 调用生成器函数，返回一个生成器对象
+# 输出：生成器对象的内存地址表示，如 <generator object yieldtest at 0x...>
+# 注意：此时函数体并未执行，只是创建了生成器对象
+# 第344行：print(next(yieldtest()))
+
+# 调用 yieldtest() 创建新的生成器对象
+# 调用 next() 函数获取生成器的第一个值
+# 执行函数体到 yield 10，返回值 10
+# 输出：10
+
+# def yieldtest():
+#     yield 10
+# print(yieldtest)
+# print(yieldtest())
+# print(next(yieldtest()))
+
+
+# 19. async、await（多线程）
+
+# （1）协程（Coroutine），也可以被称为微线程，是一种用户态内的上下文切换技术。简而言之，其实就是通过一个线程实现代码块相互切换执行
+
+# yield，生成器，借助生成器的特点也可以实现协程代码
+
+# async & awiat，在Python3.5中引入的两个关键字，结合asyncio模块可以更方便的编写协程代码
+
+#  （2）async 用来声明一个函数为异步函数，异步函数的特点是能在函数执行过程中挂起，去执行其他异步函数，等到挂起条件（假设挂起条件是sleep(5)）消失后，也就是5秒到了再回来执行
+
+# （3）await 用来用来声明程序挂起，比如异步程序执行到某一步时需要等待的时间很长，就将此挂起，去执行其他的异步程序。await 后面只能跟异步程序或有__await__属性的对象，因为异步程序与一般程序不同
+
+# （4）举例说明：
+
+# 假设有两个异步函数async a，async b，a中的某一步有await，当程序碰到关键字await b()后，异步程序挂起后去执行另一个异步b程序，就是从函数内部跳出去执行其他函数，当挂起条件消失后，不管b是否执行完，要马上从b程序中跳出来，回到原程序执行原来的操作。如果await后面跟的b函数不是异步函数，那么操作就只能等b执行完再返回，无法在b执行的过程中返回。如果要在b执行完才返回，也就不需要用await关键字了，直接调用b函数就行。所以这就需要await后面跟的是异步函数了。在一个异步函数中，可以不止一次挂起，也就是可以用多个await。
+# import time
+# import requests
+# import asyncio
+
+# async def test2(i):
+#     r = await other_test(i)
+#     print(i, r)
+
+
+# async def other_test(i):
+#     r = requests.get(i)
+#     print(i)
+#     await asyncio.sleep(4)
+#     print(time.time() - start)
+#     return r
+
+
+# url = ["https://segmentfault.com/p/1210000013564725",
+#        "https://www.jianshu.com/p/83badc8028bd",
+#        "https://www.baidu.com/"]
+
+# loop = asyncio.get_event_loop()
+# task = [asyncio.ensure_future(test2(i)) for i in url]
+# start = time.time()
+# loop.run_until_complete(asyncio.wait(task))
+# endtime = time.time() - start
+# print(endtime)
+# loop.close()
+
+# print("end")
+
+#软关键字
+# match（软关键字，3.10 + 引入的模式匹配）
+# 作用：根据不同的模式匹配数据，有点像升级版的 switch-case，更灵活。
+# 常用场景：处理不同结构的数据，比如解析 API 返回的不同状态。
+# 错误点：后面必须跟表达式；case 块里的模式要写对，比如用_表示任意值。
+# 基础案例：简单模式匹配
+# case（软关键字，和 match 配对使用）
+# 作用：定义 match 中的具体匹配模式，每个 case 对应一种情况。
+# 常用场景：和 match 一起用，写不同的匹配分支。
+# 错误点：不能单独使用，必须在 match 块里；模式语法要正确，比如用|表示或关系。
+# 基础案例：多个模式匹配
+
+# status = "success"
+# match status:
+#    case "success":
+#        print("操作成功！")  # 匹配成功，执行这里
+#    case "fail":
+#        print("操作失败！")
+#    case _:  # 匹配其他任意值
+#        print("未知状态")
+
+# num = 5
+# match num:
+#    case 1 | 2 | 3:  # 匹配1或2或3
+#        print("小数字")
+#    case 4 | 5 | 6:
+#        print("中数字")  # 匹配5，执行这里
+#    case _:
+#        print("大数字")
+
+# 软关键字：_（下划线，在模式匹配中作为通配符）
+# 作用：在 match-case 中表示匹配任意值，相当于 "随便什么都行"。
+# 常用场景：模式匹配中不想处理的情况，用_来占位。
+# 错误点：平时可以当变量名用（虽然不推荐），但在 match-case 中是软关键字。
+# value = "任意值"
+# match value:
+#    case _:  # 匹配所有情况
+#        print("不管是什么，都执行这里")  # 会执行
+# 软关键字：*（在模式匹配中表示收集多个元素）
+# 作用：在 match-case 中，匹配多个元素并收集到列表中，类似函数的 * args。
+# 常用场景：匹配可变数量的元素，比如元组中的多个值。
+# 错误点：只能在模式匹配的解构中使用，比如case (a, *rest):。
+# numbers = (1, 2, 3, 4, 5)
+# match numbers:
+#    case (first, *rest):  # first是1，rest是[2,3,4,5]
+#        print(f"第一个数是{first}，剩下的是{rest}")  # 会执行
+# 软关键字：...（Ellipsis，在模式匹配中表示占位符）
+# 作用：在模式匹配中，暂时不处理的情况，作为占位符，类似 pass。
+# 常用场景：编写模式匹配时，先占位，后续再补充代码。
+# 错误点：平时是一个内置对象，在模式匹配中作为软关键字。
+# def handle_value(value):
+#    match value:
+#        case 1:
+#            print("处理1")
+#        case 2:
+#            print("处理2")
+#        case ...:  # 其他情况暂时不处理
+#            pass
+
+
+# import sys
+# print("Python解释器路径:", sys.executable)
+# print("Python版本:", sys.version)
+
+
