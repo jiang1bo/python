@@ -211,3 +211,11 @@
 # height = s.height
 # weight = s.weight
 # print(name,age,height,weight)
+
+# 11. lambda（匿名函数）
+
+#  lambda关键字用于创建一个 特殊的“匿名函数”
+
+# g = lambda z:z**64
+
+# print(g(2))
