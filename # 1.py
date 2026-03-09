@@ -174,3 +174,16 @@
 # import：用于导入模块。
 # from：用于从模块中导入指定的部分，按需要导入指定子类或函数，减少不必要的资源浪费。
 # as：用于创建别名。
+# import time
+# from time import sleep as s
+# print(time.ctime())
+# s(3)
+# print(time.ctime())
+
+# 9. def、return（函数）
+
+# def：用于创建（或定义）一个函数。
+
+# return：用于结束所定义的函数，并返回值。
+
+def
