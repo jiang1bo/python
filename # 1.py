@@ -219,3 +219,47 @@
 # g = lambda z:z**64
 
 # print(g(2))
+
+# 12. del（删除对象）
+
+# 在Python中，一切皆对象。del关键字主要用于删除对象，还可以用于删除变量，列表或列表的一部分等
+
+# x = 1
+
+# del x
+
+# listl = [1,2,3,4,5,6,7,8,9,10]
+
+# del listl[0]
+
+# print(listl)
+
+# 13. global、nonlocal（声明变量作用域）
+
+#  global关键字用于创建一个全局变量。nonlocal关键字用于声明一个非局部变量，用于标识外部作用域的变量。
+
+x = 10
+
+def global_test():
+    global x
+    x = 21
+    return x
+
+def nonlocal_test():
+    count = 0
+    def test2():
+        nonlocal count
+        count += 1
+        return count
+    return test2
+
+num1 = global_test()
+
+print(num1)
+print(x)
+print("fffffffffff分隔线ffffffffffffff")
+
+val = nonlocal_test()
+print(val())
+print(val())
+print(val())
