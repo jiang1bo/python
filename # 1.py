@@ -186,4 +186,11 @@
 
 # return：用于结束所定义的函数，并返回值。
 
-def
+# def mysum(a,b):
+#     return a+b
+
+# mysumuse = mysum(9,21)
+
+# print(mysumuse)
+
+# print(mysum(12,23))
