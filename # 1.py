@@ -127,3 +127,50 @@
 #     if i == 5 :
 #         break
 #     print(i,end="|")
+
+# 6. pass（代码的占位符）
+# 循环，函数定义，类定义或if语句中不允许使用空代码，则可以使用pass；当执行pass语句时，不会有任何影响，只是占位作用代表空白代码
+
+# def fun1():
+#     pass
+
+# if 5 > 3:
+#     pass
+
+# 7. try、except、finally、raise（异常）
+
+# try：在try…except块中使用，它定义了一个代码块，并在没有问题的情况下执行块。如果包含任何错误，可以为不同的错误类型定义不同的块。
+# except：在try… except块中使用。 如果try块引发错误，并在有问题的情况下执行对应的代码块。
+# finally：在try…except块中使用。它定义了一个代码块，当try…except…else块结束时，该代码块将运行。无论try块是否引发错误，都将执行finally代码块。
+# raise：raise关键字用于引发异常，可以定义引发哪种错误，以及向用户显示错误信息。
+
+# def div(x, y):
+#     result = None
+#     if (not isinstance(x, int)) and (not isinstance(x, float)) and (not isinstance(y, int)) and (
+#             not isinstance(y, float)):
+#         raise Exception("抛出一个异常,输入非数字!")
+#     result = x / y
+#     return result
+
+# div("哈哈", "我")
+
+# def div(x, y):
+#     result = None
+#     try:
+#         result = x / y
+#         print(f"运算结果为{result}")
+#     except Exception:
+#         print("除数为0，异常！")
+#     finally:
+#         print("此语句必定指定")
+#     return result
+
+# div(1, 2)
+# print("split")
+# div(1,0)
+
+# 8.  import、from、as（模块导入）
+
+# import：用于导入模块。
+# from：用于从模块中导入指定的部分，按需要导入指定子类或函数，减少不必要的资源浪费。
+# as：用于创建别名。
