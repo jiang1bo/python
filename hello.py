@@ -474,4 +474,5 @@
 # print("Python解释器路径:", sys.executable)
 # print("Python版本:", sys.version)
 
-
+print("hello world")
+print(23+34)
