@@ -474,8 +474,21 @@
 # print("Python解释器路径:", sys.executable)
 # print("Python版本:", sys.version)
 
-print("hello world")
-print(23+34)
+# print("hello world")
+# print(23+34)
+# print("hello \n world")
 
 
-print("hello \n world")
+#BMI
+
+Weight = float(input("请输入体重（单位：千克）："))
+height = float(input("请输入身高（单位：米）："))
+Bmi = Weight/height**2
+print(type(Bmi))
+print("您的BMI值为：", str(Bmi))
+print(Weight)
+print(height)
+print(type(Bmi))
+print(type(Weight))
+print(type(height))
+
