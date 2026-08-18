@@ -480,15 +480,59 @@
 
 
 #BMI
+# test = "zhao"
+# Weight = float(input("请输入体重（单位：千克）："))
+# height = float(input("请输入身高（单位：米）："))
+# Bmi = Weight/height**2
+# print(type(Bmi))
+# print("您的BMI值为：", str(Bmi))
+# print(Weight)
+# print(height)
+# print(type(Bmi))
+# print(type(Weight))
+# print(type(height))
+# print(type(False))
+# print(type(5))
+# print(type(test))
 
-Weight = float(input("请输入体重（单位：千克）："))
-height = float(input("请输入身高（单位：米）："))
-Bmi = Weight/height**2
-print(type(Bmi))
-print("您的BMI值为：", str(Bmi))
-print(Weight)
-print(height)
-print(type(Bmi))
-print(type(Weight))
-print(type(height))
+# if elif else
+
+# price = float(input("输入商品价格："))
+# sex = input("输入性别：男/女：")
+
+# if  price > 100:
+#     if sex == "男":
+#         print(str(price) + "有点小贵")
+#         print("狗都不买")
+#     else:
+#         print("女士，你值得拥有")
+# elif 40 < price <= 80:
+#     if sex == "男":
+#         print(str(price) + "还行")
+#         print("我再看看")
+#     else:
+#         print("女士，你值得拥有")
+#         print("买")
+# else: 
+#     if sex == "男":
+#         print(str(price) + "很实惠")
+#         print("来一个")
+#     else:
+#         print("女士，你值得拥有")
+#         print("太便宜，不买了")
+
+# 列表list
+
+# list_test = [22, 44, 45, 98, 88, 100, 500]
+# list_test.append(1024)
+# list_test.remove(100)
+# list_test[0] = 999
+# print(list_test)
+
+# print(min(list_test))
+
+# print(max(list_test))
+
+# print(sorted(list_test))
+
 
