@@ -535,4 +535,22 @@
 
 # print(sorted(list_test))
 
+#字典
 
+dict_test = {"1":"1111","2":"22222","3":"3333333"} 
+
+dict_test["4"] = "4444444"
+
+dict_test["5"] = "555555"
+
+dict_test["6"] = "666666"
+
+
+query = input("输入查询数字：")
+
+
+if query in dict_test:
+    print(dict_test[query])
+else:
+    print("未收录")
+    print("当前已收录数据数为：" + str(len(dict_test)))
