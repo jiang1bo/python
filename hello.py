@@ -113,7 +113,7 @@
 
 
 # 5. continue、break（循环控制）
-#continue 跳过。break 中断？
+# continue 跳过。break 中断？
 # continue：continue关键字用于在for循环（或while循环）中结束当前迭代，并继续进行下一个迭代。
 # break：break关键字用于中断for循环或while循环。
 
@@ -146,8 +146,7 @@
 
 # def div(x, y):
 #     result = None
-#     if (not isinstance(x, int)) and (not isinstance(x, float)) and (not isinstance(y, int)) and (
-#             not isinstance(y, float)):
+#     if (not isinstance(x, int)) and (not isinstance(x, float)) and (not isinstance(y, int)) and (not isinstance(y, float)):
 #         raise Exception("抛出一个异常,输入非数字!")
 #     result = x / y
 #     return result
@@ -372,13 +371,16 @@
 
 # async & awiat，在Python3.5中引入的两个关键字，结合asyncio模块可以更方便的编写协程代码
 
-#  （2）async 用来声明一个函数为异步函数，异步函数的特点是能在函数执行过程中挂起，去执行其他异步函数，等到挂起条件（假设挂起条件是sleep(5)）消失后，也就是5秒到了再回来执行
+#  （2）async 用来声明一个函数为异步函数，异步函数的特点是能在函数执行过程中挂起，去执行其他异步函数，
+# 等到挂起条件（假设挂起条件是sleep(5)）消失后，也就是5秒到了再回来执行
 
-# （3）await 用来用来声明程序挂起，比如异步程序执行到某一步时需要等待的时间很长，就将此挂起，去执行其他的异步程序。await 后面只能跟异步程序或有__await__属性的对象，因为异步程序与一般程序不同
+# （3）await 用来用来声明程序挂起，比如异步程序执行到某一步时需要等待的时间很长，就将此挂起，去执行其他的异步程序。
+#  await 后面只能跟异步程序或有__await__属性的对象，因为异步程序与一般程序不同
 
 # （4）举例说明：
 
-# 假设有两个异步函数async a，async b，a中的某一步有await，当程序碰到关键字await b()后，异步程序挂起后去执行另一个异步b程序，就是从函数内部跳出去执行其他函数，当挂起条件消失后，不管b是否执行完，要马上从b程序中跳出来，回到原程序执行原来的操作。如果await后面跟的b函数不是异步函数，那么操作就只能等b执行完再返回，无法在b执行的过程中返回。如果要在b执行完才返回，也就不需要用await关键字了，直接调用b函数就行。所以这就需要await后面跟的是异步函数了。在一个异步函数中，可以不止一次挂起，也就是可以用多个await。
+# 假设有两个异步函数async a，async b，a中的某一步有await，当程序碰到关键字await b()后，
+# 异步程序挂起后去执行另一个异步b程序，就是从函数内部跳出去执行其他函数，当挂起条件消失后，不管b是否执行完，要马上从b程序中跳出来，回到原程序执行原来的操作。如果await后面跟的b函数不是异步函数，那么操作就只能等b执行完再返回，无法在b执行的过程中返回。如果要在b执行完才返回，也就不需要用await关键字了，直接调用b函数就行。所以这就需要await后面跟的是异步函数了。在一个异步函数中，可以不止一次挂起，也就是可以用多个await。
 # import time
 # import requests
 # import asyncio
@@ -410,7 +412,7 @@
 
 # print("end")
 
-#软关键字
+# 软关键字
 # match（软关键字，3.10 + 引入的模式匹配）
 # 作用：根据不同的模式匹配数据，有点像升级版的 switch-case，更灵活。
 # 常用场景：处理不同结构的数据，比如解析 API 返回的不同状态。
@@ -479,7 +481,7 @@
 # print("hello \n world")
 
 
-#BMI
+# BMI
 # test = "zhao"
 # Weight = float(input("请输入体重（单位：千克）："))
 # height = float(input("请输入身高（单位：米）："))
@@ -513,7 +515,7 @@
 #     else:
 #         print("女士，你值得拥有")
 #         print("买")
-# else: 
+# else:
 #     if sex == "男":
 #         print(str(price) + "很实惠")
 #         print("来一个")
@@ -535,22 +537,58 @@
 
 # print(sorted(list_test))
 
-#字典
+# 字典
 
-dict_test = {"1":"1111","2":"22222","3":"3333333"} 
+# dict_test = {"1":"1111","2":"22222","3":"3333333"}
 
-dict_test["4"] = "4444444"
+# dict_test["4"] = "4444444"
 
-dict_test["5"] = "555555"
+# dict_test["5"] = "555555"
 
-dict_test["6"] = "666666"
-
-
-query = input("输入查询数字：")
+# dict_test["6"] = "666666"
 
 
-if query in dict_test:
-    print(dict_test[query])
-else:
-    print("未收录")
-    print("当前已收录数据数为：" + str(len(dict_test)))
+# query = input("输入查询数字：")
+
+
+# if query in dict_test:
+#     print(dict_test[query])
+# else:
+#     print("未收录")
+#     print("当前已收录数据数为：" + str(len(dict_test)))
+
+
+# for循环
+
+# for i in range(10):
+#     print(i)
+
+# for x in range(1,101):
+#     print(x)
+
+# sum = 0
+# for y in range(1, 101):
+#     sum = sum + y
+#     # print(sum)
+#     if y == 100:
+#         print(sum)
+
+print(sum([1, 10]))
+
+
+# inum = input("请输入任意数字，输入q退出求平均值：")
+# num = 0
+# sum = 0
+# if inum == "q":
+#     print("第一个数字不能为q")
+# else:
+#     while inum != "q":
+#         # num = num + 1
+#         # sum = sum + float(inum)
+#         num += 1
+#         sum += float(inum)
+#         print(str(num) ,str(sum))
+#         print(num ,sum)
+#         avg = sum/num
+#         inum = input("请输入任意数字，输入q退出求平均值：")
+#     print("平均值：" + str(avg))
