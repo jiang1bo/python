@@ -573,7 +573,7 @@
 #     if y == 100:
 #         print(sum)
 
-print(sum([1, 10]))
+# print(sum([1, 10]))
 
 
 # inum = input("请输入任意数字，输入q退出求平均值：")
@@ -592,3 +592,12 @@ print(sum([1, 10]))
 #         avg = sum/num
 #         inum = input("请输入任意数字，输入q退出求平均值：")
 #     print("平均值：" + str(avg))
+# x = True
+# y = False
+
+# print(x+y+True+x+y)
+
+a = 0
+b = 8
+
+print(a and 5 or b and 8)
