@@ -597,7 +597,9 @@
 
 # print(x+y+True+x+y)
 
-a = 0
-b = 8
+# a = 0
+# b = 8
 
-print(a and 5 or b and 8)
+# print(a and 5 or b and 8)
+
+
